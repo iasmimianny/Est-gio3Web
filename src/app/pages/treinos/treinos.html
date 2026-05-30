@@ -1,0 +1,42 @@
+<h2>Controle de Treinos</h2>
+
+<input
+  type="text"
+  placeholder="Nome do exercício"
+  [(ngModel)]="nome">
+
+<br><br>
+
+<select [(ngModel)]="grupo">
+  <option value="">Grupo muscular</option>
+  <option>Perna</option>
+  <option>Peito</option>
+  <option>Costas</option>
+  <option>Braço</option>
+  <option>Ombro</option>
+</select>
+
+<br><br>
+
+<input
+  type="number"
+  min="1"
+  max="5"
+  [(ngModel)]="dificuldade">
+
+<br><br>
+
+<button (click)="adicionarTreino()">
+  Adicionar
+</button>
+
+<hr>
+
+@for(treino of treinos; track treino.nome){
+
+  <app-treino-card
+    [treino]="treino"
+    (concluir)="concluirTreino($event)">
+  </app-treino-card>
+
+}

@@ -1,0 +1,15 @@
+<p>
+  {{ treino.nome }}
+  ({{ treino.grupo }})
+  ⭐ {{ treino.dificuldade }}
+
+  @if(treino.feito){
+    ✅ Concluído
+  } @else {
+    ⏳ Pendente
+  }
+
+  <button (click)="marcarConcluido()">
+    Concluir
+  </button>
+</p>
