@@ -32,7 +32,7 @@
 
 <hr>
 
-@for(treino of treinos; track treino.nome){
+@for(treino of treinos; track $index){
 
   <app-treino-card
     [treino]="treino"

@@ -9,7 +9,6 @@ import { Treino } from '../../services/treino';
   templateUrl: './treinos.html',
   styleUrl: './treinos.css',
 })
-
 export class Treinos {
 
   nome = '';
@@ -20,25 +19,17 @@ export class Treinos {
 
   constructor(private treinoService: Treino) {
 
+  this.carregarTreinos();
+
+}
+  carregarTreinos() {
+
   this.treinoService.getTreinos()
-  .subscribe((dados: any) => {
+    .subscribe((dados: any) => {
 
-    const exercicios = [
-      'Agachamento',
-      'Supino',
-      'Rosca Direta',
-      'Desenvolvimento',
-      'Leg Press'
-    ];
+      this.treinos = [...dados];
 
-    this.treinos = dados.slice(0, 5).map((item: any, index: number) => ({
-      nome: exercicios[index],
-      grupo: 'Academia',
-      dificuldade: 3,
-      feito: item.completed
-    }));
-
-  });
+    });
 
 }
 
@@ -48,18 +39,27 @@ export class Treinos {
       return;
     }
 
-    this.treinos.push({
+    const novoTreino = {
       nome: this.nome,
       grupo: this.grupo,
       dificuldade: this.dificuldade,
       feito: false
-    });
+    };
+
+    this.treinoService.adicionarTreino(novoTreino)
+  .subscribe(() => {
+
+    this.carregarTreinos();
+
+  });
 
     this.nome = '';
     this.grupo = '';
     this.dificuldade = 1;
   }
+
   concluirTreino(treino: any) {
-  treino.feito = true;
-}
+    treino.feito = true;
+  }
+
 }

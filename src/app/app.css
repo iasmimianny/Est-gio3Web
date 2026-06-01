@@ -1,0 +1,30 @@
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+nav {
+  background: #1e293b;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: #22c55e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #16a34a;
+}

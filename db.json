@@ -1,0 +1,19 @@
+{
+  "treinos": [
+    {
+      "nome": "Entensora",
+      "grupo": "Perna",
+      "dificuldade": 2,
+      "feito": false,
+      "id": "QmE3AlBKAxs"
+    },
+    {
+      "nome": "Supino",
+      "grupo": "Peito",
+      "dificuldade": 3,
+      "feito": false,
+      "id": "J6G8VeokpjM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+h2 {
+  color: #22c55e;
+}
+
+p {
+  color: aliceblue;
+}
