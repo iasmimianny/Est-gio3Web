@@ -4,15 +4,22 @@
       "nome": "Entensora",
       "grupo": "Perna",
       "dificuldade": 2,
-      "feito": false,
+      "feito": true,
       "id": "QmE3AlBKAxs"
     },
     {
       "nome": "Supino",
       "grupo": "Peito",
       "dificuldade": 3,
-      "feito": false,
+      "feito": true,
       "id": "J6G8VeokpjM"
+    },
+    {
+      "nome": "elevação lateral",
+      "grupo": "Ombro",
+      "dificuldade": 1,
+      "feito": true,
+      "id": "Mm7QgIACCfg"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

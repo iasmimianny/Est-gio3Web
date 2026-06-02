@@ -59,7 +59,17 @@ export class Treinos {
   }
 
   concluirTreino(treino: any) {
-    treino.feito = true;
-  }
+
+  treino.feito = true;
+
+  this.treinoService
+    .atualizarTreino(treino.id, treino)
+    .subscribe(() => {
+
+      this.carregarTreinos();
+
+    });
+
+}
 
 }

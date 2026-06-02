@@ -18,4 +18,11 @@ export class Treino {
     return this.http.post(this.apiUrl, treino);
   }
 
+  atualizarTreino(id: string, treino: any) {
+  return this.http.put(
+    `${this.apiUrl}/${id}`,
+    treino
+  );
+}
+
 }
